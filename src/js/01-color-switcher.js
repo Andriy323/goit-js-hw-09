@@ -9,9 +9,7 @@ const refs = {
 
 refs.start.addEventListener('click', startChangeColor);
 refs.stop.addEventListener('click', stopChangeColor);
-
 refs.stop.setAttribute('disabled', 'disabled');
-
 let timerId = null;
 
 function startChangeColor() {
