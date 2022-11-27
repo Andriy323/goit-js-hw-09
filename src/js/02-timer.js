@@ -38,10 +38,7 @@ const options = {
       refs.button.setAttribute('disabled', 'disabled');
       return;
     } else {
-      Notify.success('The timer is started', {
-        timeout: 6000,
-        position: 'center-top',
-      });
+     
       refs.button.removeAttribute('disabled');
     }
   },
@@ -51,6 +48,10 @@ const selectDate = flatpickr('input#datetime-picker', options);
 refs.button.addEventListener('click', onClick);
 function onClick(e) {
   e.preventDefault();
+  Notify.success('The timer is started', {
+    timeout: 6000,
+    position: 'center-top',
+  });
   // console.log(selectDate.selectedDates[0])
   // convertMs(result)
   idInterval = setInterval(calcDays, 1000);
